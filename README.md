@@ -49,6 +49,11 @@ def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
    """
 ```
 
+## Examples
+
+See [an example using ROOT histograms](https://github.com/cranmer/look-elsewhere-2d/blob/master/root_TH2F_example.ipynb)
+
+**Note**: You can run the notebook from your browser right now by gong to [everware](https://everware.rep.school.yandex.net/) and paste the URL to this repository. 
 
 
 ## Background
