@@ -5,8 +5,53 @@ Kyle Cranmer, Nov 19, 2015
 Based on
 *Estimating the significance of a signal in a multi-dimensional search* by  Ofer Vitells and Eilam Gross http://arxiv.org/pdf/1105.4355v1.pdf
 
-You can run the notebook from your browser right now by gong to [everware](https://everware.rep.school.yandex.net/) 
-and paste the URL to this repository. 
+*Note*: You can run the notebook from your browser right now by gong to [everware](https://everware.rep.school.yandex.net/) and paste the URL to this repository. 
+
+## Usage:
+
+```python
+import lee2d
+```
+
+You start with several 2d numpy arrays that represent the 
+-2 log likleihood ratio scan over your two parameters.
+It's up to you to threshold on that make 2d numpy arrays at two 
+different levels $u_1$ and $u_2$ giving new numpy
+arrays with values 0. or 1. 
+
+```python
+	scan = np.array((nx, ny))
+
+    #get excursion sets above those two levels
+    exc1 = (scan>u1) + 0. #add 0. to convert from bool to double
+    exc2 = (scan>u2) + 0.
+```
+
+For each of these scans you calculate the Euler characteristic 
+using this function in `lee2d.py`
+
+```python
+def calculate_euler_characteristic(a):
+   """Calculate the Euler characteristic for level set a"""
+```
+
+after calculating the expected (mean) value of the Euler characteristics
+for those two different levels, you can correct the local siginficance with
+this function in `lee2d.py`
+
+```
+def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
+   """
+   Return the global p-value for an observed local significance 
+   after correcting for the look-elsewhere effect
+   given expected Euler characteristic exp_phi_1 above level u1
+   and exp_phi_2 above level u2
+   """
+```
+
+
+
+## Background
 
 This is for the special case of a likelihood function of the form 
 $L(\mu, \nu_1, \nu_2)$ where $\mu$ is a single parameter of interest and
