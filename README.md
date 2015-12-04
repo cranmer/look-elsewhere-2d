@@ -5,7 +5,7 @@ Kyle Cranmer, Nov 19, 2015
 Based on
 *Estimating the significance of a signal in a multi-dimensional search* by  Ofer Vitells and Eilam Gross http://arxiv.org/pdf/1105.4355v1.pdf
 
-*Note*: You can run the notebook from your browser right now by gong to [everware](https://everware.rep.school.yandex.net/) and paste the URL to this repository. 
+**Note**: You can run the notebook from your browser right now by gong to [everware](https://everware.rep.school.yandex.net/) and paste the URL to this repository. 
 
 ## Usage:
 
@@ -39,7 +39,7 @@ after calculating the expected (mean) value of the Euler characteristics
 for those two different levels, you can correct the local siginficance with
 this function in `lee2d.py`
 
-```
+```python
 def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
    """
    Return the global p-value for an observed local significance 
