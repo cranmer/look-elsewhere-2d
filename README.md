@@ -5,6 +5,9 @@ Kyle Cranmer, Nov 19, 2015
 Based on
 *Estimating the significance of a signal in a multi-dimensional search* by  Ofer Vitells and Eilam Gross http://arxiv.org/pdf/1105.4355v1.pdf
 
+You can run the notebook from your browser right now by gong to [everware](https://everware.rep.school.yandex.net/) 
+and paste the URL to this repository. 
+
 This is for the special case of a likelihood function of the form 
 $L(\mu, \nu_1, \nu_2)$ where $\mu$ is a single parameter of interest and
 $\nu_1,\nu_2$ are two nuisance parameters that are not identified under the null.
@@ -32,4 +35,7 @@ The notebook is broken into two parts.
   * calculation of LEE-corrected 'global p-value' given $N_1,N_2$
   * some code to calculate $\phi(A_u)$ using convolutional filters
   * Normal usage based on reading a ROOT file with several likleihood scans
+
+### Image of example 2-d likelihood scans
+  ![](islands.png)
 
