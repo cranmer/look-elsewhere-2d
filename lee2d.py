@@ -75,7 +75,6 @@ def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
    after correcting for the look-elsewhere effect
    given expected Euler characteristic exp_phi_1 above level u1
    and exp_phi_2 above level u2
-
    """
    n1, n2 = get_coefficients(u1,u2,exp_phi_1, exp_phi_2)
    this_global_p = global_pvalue(max_local_sig**2, n1, n2)
