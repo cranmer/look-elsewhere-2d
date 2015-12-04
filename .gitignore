@@ -56,3 +56,7 @@ docs/_build/
 # PyBuilder
 target/
 .ipynb_checkpoints/look-elsewhere-2d-checkpoint.ipynb
+
+.ipynb_checkpoints/root_TH2F_example-checkpoint.ipynb
+
+.ipynb_checkpoints/examples_from_paper-checkpoint.ipynb
