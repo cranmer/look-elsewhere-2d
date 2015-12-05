@@ -7,6 +7,19 @@ Based on
 
 **Note**: You can run the notebook from your browser right now by gong to [everware](https://everware.rep.school.yandex.net/) and paste the URL to this repository. 
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.34842.svg)](http://dx.doi.org/10.5281/zenodo.34842)
+
+```
+@misc{kyle_cranmer_2015_34842,
+  author       = {Kyle Cranmer},
+  title        = {look-elsewhere-2d: v1.0},
+  month        = dec,
+  year         = 2015,
+  doi          = {10.5281/zenodo.34842},
+  url          = {http://dx.doi.org/10.5281/zenodo.34842}
+}
+```
+
 ## Usage:
 
 ```python
