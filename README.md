@@ -78,14 +78,6 @@ where
    * $P(\chi^2_1 > u)$ is the standard chi-square probability 
    * and $N_1$ and $N_2$ are two coefficients that characterize the chi-square random field.
    
-### structure of the notebook
-
-The notebook is broken into two parts.
-  * calculation of $N_1$ and $N_2$ based on $E[ \phi(A_u) ]$ at two different levels $u_1$ and $u_2$
-  * calculation of LEE-corrected 'global p-value' given $N_1,N_2$
-  * some code to calculate $\phi(A_u)$ using convolutional filters
-  * Normal usage based on reading a ROOT file with several likleihood scans
-
 ### Image of example 2-d likelihood scans
   ![](islands.png)
 
