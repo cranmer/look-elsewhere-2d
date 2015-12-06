@@ -30,12 +30,12 @@ You start with several 2d numpy arrays that represent the
 
 ![](q_def.png)
 
-It's up to you to threshold on that scan to make 2d numpy arrays for
+It's up to you to threshold on each scan to make 2d numpy arrays for
 the excursion sets 
 
 ![](A_u.png)
 
-This shoudl be done at two different threshold levels $u_1$ and $u_2$ giving new numpy
+This should be done at two different threshold levels $u_1$ and $u_2$ giving new numpy
 arrays with values 0. or 1. For example
 
 ```python
@@ -45,6 +45,9 @@ arrays with values 0. or 1. For example
     A_u1 = (q_scan>u1) + 0. #add 0. to convert from bool to double
     A_u2 = (q_scan>u2) + 0.
 ```
+(The values for $u_1$ and $u_2$ are arbitrary. If there are enough toy scans, the choice shouldn't matter, but 
+you may want to do some tests with other choices. Suggestion is to use something like $u_1=0.1$ and $u_2=1$.)
+
 
 For each of these scans you calculate the Euler characteristic 
 using this function in `lee2d.py`
