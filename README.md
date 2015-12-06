@@ -27,9 +27,12 @@ import lee2d
 ```
 
 You start with several 2d numpy arrays that represent the 
+
 ![](q_def.png)
+
 It's up to you to threshold on that scan to make 2d numpy arrays for
 the excursion sets 
+
 ![](A_u.png)
 
 This shoudl be done at two different threshold levels $u_1$ and $u_2$ giving new numpy
@@ -54,6 +57,7 @@ def calculate_euler_characteristic(a):
 after calculating the expected (mean) value of the Euler characteristics
 for those two different levels, you can correct the local siginficance with
 this function in `lee2d.py`. The maximum local significance is given by 
+
 ![](Z_local.png)
 
 ```python
