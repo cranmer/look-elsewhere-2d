@@ -70,21 +70,6 @@ def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
    """
 ```
 
-These are toy histograms, but they are supposed to represent scans of $ q(\nu_1, nu_2)$ where
-
-\begin{equation}
-q(\nu_1, \nu_2) = -2 \log \frac{ \max_\theta L(\mu=0, \nu_1, \nu_2, \theta)}{ \max_{\mu, \theta} L(\mu, \nu_1, \nu_2, \theta)}
-\end{equation}
-
-and $\theta$ are nuisance parameters for the background model, $\mu$ is parameter of interest, and $\nu_1, \nu_2$ are nuisance parameters for the signal that are not meaningful for the null (eg. the mass and width of a hypothetical particle).
-
-In this setting, the maximum local significance is given by 
-
-\begin{equation}
-Z_{local} = \max_{\nu_1, \nu_2} \sqrt{q(\nu_1, \nu_2)}
-\end{equation}
-
-
 
 ## Examples
 
