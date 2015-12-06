@@ -27,17 +27,20 @@ import lee2d
 ```
 
 You start with several 2d numpy arrays that represent the 
--2 log likleihood ratio scan over your two parameters.
-It's up to you to threshold on that make 2d numpy arrays at two 
-different levels $u_1$ and $u_2$ giving new numpy
-arrays with values 0. or 1. 
+![](q_def.png)
+It's up to you to threshold on that scan to make 2d numpy arrays for
+the excursion sets 
+![](A_u.png)
+
+This shoudl be done at two different threshold levels $u_1$ and $u_2$ giving new numpy
+arrays with values 0. or 1. For example
 
 ```python
-	scan = np.array((nx, ny))
+	q_scan = np.array((nx, ny))
 
     #get excursion sets above those two levels
-    exc1 = (scan>u1) + 0. #add 0. to convert from bool to double
-    exc2 = (scan>u2) + 0.
+    A_u1 = (q_scan>u1) + 0. #add 0. to convert from bool to double
+    A_u2 = (q_scan>u2) + 0.
 ```
 
 For each of these scans you calculate the Euler characteristic 
@@ -50,7 +53,8 @@ def calculate_euler_characteristic(a):
 
 after calculating the expected (mean) value of the Euler characteristics
 for those two different levels, you can correct the local siginficance with
-this function in `lee2d.py`
+this function in `lee2d.py`. The maximum local significance is given by 
+![](Z_local.png)
 
 ```python
 def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
@@ -61,6 +65,22 @@ def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
    and exp_phi_2 above level u2
    """
 ```
+
+These are toy histograms, but they are supposed to represent scans of $ q(\nu_1, nu_2)$ where
+
+\begin{equation}
+q(\nu_1, \nu_2) = -2 \log \frac{ \max_\theta L(\mu=0, \nu_1, \nu_2, \theta)}{ \max_{\mu, \theta} L(\mu, \nu_1, \nu_2, \theta)}
+\end{equation}
+
+and $\theta$ are nuisance parameters for the background model, $\mu$ is parameter of interest, and $\nu_1, \nu_2$ are nuisance parameters for the signal that are not meaningful for the null (eg. the mass and width of a hypothetical particle).
+
+In this setting, the maximum local significance is given by 
+
+\begin{equation}
+Z_{local} = \max_{\nu_1, \nu_2} \sqrt{q(\nu_1, \nu_2)}
+\end{equation}
+
+
 
 ## Examples
 
