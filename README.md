@@ -103,6 +103,7 @@ where
    * $P(\chi^2_1 > u)$ is the standard chi-square probability 
    * and $N_1$ and $N_2$ are two coefficients that characterize the chi-square random field.
    
-### Image of example 2-d likelihood scans
+### Image for example 2-d likelihood scans
+  ![](chi-square-random-fields.png)
   ![](islands.png)
 
