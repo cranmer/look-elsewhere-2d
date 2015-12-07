@@ -96,7 +96,7 @@ def calculate_euler_characteristic(a):
    n_vertices = np.sum(a>0)
    
    EulerCharacteristic = n_vertices-n_edges+n_faces
-   print '%d-%d+%d=%d' %(n_vertices,n_edges,n_faces,EulerCharacteristic) 
+   #print '%d-%d+%d=%d' %(n_vertices,n_edges,n_faces,EulerCharacteristic) 
    
    return n_vertices-n_edges+n_faces   
 
