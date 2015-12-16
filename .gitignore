@@ -62,3 +62,7 @@ target/
 .ipynb_checkpoints/examples_from_paper-checkpoint.ipynb
 
 .ipynb_checkpoints/create_gaussian_process_examples-checkpoint.ipynb
+
+HiggsLWA.root
+
+HiggsLWANew.root
