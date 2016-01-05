@@ -1,0 +1,33 @@
+name: My2ExpLEEKernel
+doc: first index is channel, second index is x point. this is for testing LEE ideas. Describes muhat, not significance
+stationary: false
+params: [a1,b1,a2,b2,l1,l2]
+
+
+value: |
+    double sig11 = a1*x1+b1;
+    double sig12 = a1*x2+b1;
+    double sig21 = a2*x1+b2;
+    double sig22 = a2*x2+b2;
+    double r = (x2-x1);
+    double C11 = (1./sig11)/(1./sig11/sig11 + 1./sig21/sig21);
+    double C12 = (1./sig12)/(1./sig12/sig12 + 1./sig22/sig22);
+    double C21 = (1./sig21)/(1./sig11/sig11 + 1./sig21/sig21);
+    double C22 = (1./sig22)/(1./sig12/sig12 + 1./sig22/sig22);
+    double K1 = C11*C12*exp(-r*r/l1/l1); // check
+    double K2 = C21*C22*exp(-r*r/l2/l2); // check 
+    return K1+K2;
+
+grad:
+    a1: |
+        return 1;
+    b1: |     
+        return 1.;
+    a2: |
+        return 1;
+    b2: |     
+        return 1.;
+    l1: |     
+        return 1.;
+    l2: |     
+        return 1.;                
