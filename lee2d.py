@@ -46,7 +46,7 @@ from scipy.stats import norm
 
 def expected_euler(u, n1, n2):
    """return expected Euler characteristic for given level u and coefficients n1, n2"""
-   return chi2.cdf(u, 1) + np.exp(-u/2)*(n1+n2*np.sqrt(u))
+   return chi2.sf(u, 1) + np.exp(-u/2)*(n1+n2*np.sqrt(u))
 
 def _equations(p,exp_phi_1, exp_phi_2,u1, u2):
    """set of equations to solve to find n1, n2"""
@@ -67,7 +67,7 @@ def global_pvalue(u,n1,n2):
    Return the global p-value for an observed 
    -2log likelihood ratio value u and given n1,n2
    """
-   return expected_euler(u,n1,n2)-1.
+   return expected_euler(u,n1,n2)
 
 def do_LEE_correction(max_local_sig, u1, u2, exp_phi_1, exp_phi_2):
    """
